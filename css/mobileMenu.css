@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/*반응형 모바일 타블렛 해더 mbtb:mobile, tablet*/
+/*반응형 브라우저 크기가 599px 이하일때*/
+/*반응형, 브라우저 크기가 600이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이하일 때*/
+#mobile_wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: right;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#mobile_right {
+  position: relative;
+  width: 80%;
+  background-color: #fff;
+  padding: 0 16px;
+}
+#mobile_right .mobile_right_header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 23px 0;
+  background-color: fff;
+}
+#mobile_right .mobile_right_header .mobile_right_logo img {
+  height: 13px;
+}
+#mobile_right .mobile_right_header:after {
+  position: absolute;
+  top: 59px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #D9D9D9;
+}
+#mobile_right .mobile_right_header .mobile_menu_close {
+  vertical-align: middle;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+#mobile_right #mobile_right_menu {
+  padding-top: 14px;
+}
+#mobile_right #mobile_right_menu .mobile_right_lnb {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+#mobile_right #mobile_right_menu .mobile_right_lnb li {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+#mobile_right #mobile_right_menu .mobile_right_lnb li a {
+  padding: 4px 0;
+  color: #121212;
+}
+#mobile_right #mobile_right_menu .mobile_right_lnb li a:hover {
+  color: #4F83FC;
+}

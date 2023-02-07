@@ -1,0 +1,861 @@
+@charset "UTF-8";
+/*반응형 모바일 타블렛 해더 mbtb:mobile, tablet*/
+/*반응형 브라우저 크기가 599px 이하일때*/
+/*반응형, 브라우저 크기가 600이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이하일 때*/
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+body {
+  /*가운데 정렬*/
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/*컨텐츠 타이틀 공통*/
+.content_tit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1920px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.content_tit h3 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 160%;
+  color: #121212;
+}
+@media (max-width: 768px) {
+  .content_tit h3 {
+    font-size: 2.4rem;
+  }
+}
+.content_tit p {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #545454;
+}
+@media (max-width: 768px) {
+  .content_tit p {
+    font-size: 1.6rem;
+  }
+}
+
+/*===== header, 헤더 =====*/
+#header {
+  width: 100%;
+  max-width: 1920px;
+  height: 60px;
+  background-color: #fff;
+}
+#header .header_inner {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 24px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+#header .gnb_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 49px;
+  width: 100%;
+  height: 60px;
+}
+#header .gnb_wrap .logo_area {
+  padding-top: 23px;
+}
+#header .gnb_wrap .logo_area a img {
+  width: 108px;
+  height: 13px;
+}
+#header .gnb_wrap #gnb {
+  height: 60px;
+  flex: none;
+}
+#header .gnb_wrap #gnb .nav_list {
+  display: flex;
+  gap: 16px;
+}
+#header .gnb_wrap #gnb .nav_list .nav_menu a {
+  padding: 8px 8px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 60px;
+  color: #121212;
+}
+#header .gnb_wrap #gnb .nav_list .nav_menu a:hover, #header .gnb_wrap #gnb .nav_list .nav_menu a:active, #header .gnb_wrap #gnb .nav_list .nav_menu a:focus {
+  color: #4F83FC;
+}
+#header .right_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+#header .right_menu div a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 8px;
+}
+#header .right_menu div a:hover {
+  color: #4F83FC;
+}
+#header .right_menu .join a {
+  color: #fff;
+  background: #4F83FC;
+  border-radius: 4px;
+}
+#header .right_menu .join a:hover {
+  background-color: #316EFE;
+}
+#header .right_menu .mobile_open_btn {
+  display: none;
+}
+
+/*===== header, 헤더 tablet=====*/
+@media (max-width: 1200px) {
+  #header #gnb {
+    display: none;
+  }
+  #header .right_menu .class_registration, #header .right_menu .login {
+    display: none;
+  }
+  #header .right_menu .mobile_open_btn {
+    display: block;
+  }
+}
+/*===== mobile_menu 모바일 메뉴=====*/
+#mobile_menu_wrap {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  #mobile_menu_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: width 2s, height 2s;
+  }
+  #mobile_menu_wrap:hover {
+    transition-duration: 0.3s;
+  }
+  #mobile_menu_wrap .mobile_right_inner {
+    position: relative;
+    padding: 0 16px;
+  }
+  #mobile_menu_wrap #mobile_right_box {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+  }
+  #mobile_menu_wrap .mobile_right_header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    padding: 12px 0;
+    background-color: #fff;
+  }
+  #mobile_menu_wrap .mobile_right_header .mobile_right_logo {
+    height: 60px;
+    padding-top: 11px;
+  }
+  #mobile_menu_wrap .mobile_right_header .mobile_right_logo img {
+    height: 13px;
+  }
+  #mobile_menu_wrap .mobile_right_header .mobile_menu_close {
+    padding-top: 7px;
+  }
+  #mobile_menu_wrap .mobile_right_header .mobile_menu_close .mobile_menu_close_box {
+    transition-duration: 0.3s;
+  }
+  #mobile_menu_wrap .mobile_right_header .mobile_menu_close .mobile_menu_close_box:hover {
+    transform: rotate(90deg);
+    color: #4F83FC;
+  }
+  #mobile_menu_wrap .mobile_right_header .mobile_menu_close .mobile_menu_close_box:hover path {
+    fill: #4F83FC;
+  }
+  #mobile_menu_wrap .line {
+    width: 100%;
+    height: 1px;
+    background: #D9D9D9;
+  }
+  #mobile_menu_wrap #mobile_gnb {
+    padding: 14px 2px;
+  }
+  #mobile_menu_wrap #mobile_gnb .mobile_menu_box {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  #mobile_menu_wrap #mobile_gnb .mobile_menu_box .mobile_menu_list {
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    color: #121212;
+  }
+  #mobile_menu_wrap #mobile_gnb .mobile_menu_box .mobile_menu_list a {
+    padding: 4px 0;
+  }
+  #mobile_menu_wrap #mobile_gnb .mobile_menu_box .mobile_menu_list a:hover, #mobile_menu_wrap #mobile_gnb .mobile_menu_box .mobile_menu_list a:active, #mobile_menu_wrap #mobile_gnb .mobile_menu_box .mobile_menu_list a:focus {
+    color: #4F83FC;
+  }
+}
+/*===== visual_banner, 코딩실력을 알고리즘으로 라이징 하자 =====*/
+#visual_banner {
+  width: 100%;
+  max-width: 1920px;
+  height: 450px;
+  background-color: chocolate;
+}
+#visual_banner .visual_banner_inner {
+  width: 100%;
+  height: 450px;
+  background: url(../assets/image/visual_banner.jpg) no-repeat center;
+  padding-top: 0.1px;
+}
+#visual_banner .move_btn_box {
+  margin-top: 291px;
+  text-align: center;
+}
+#visual_banner .move_btn_box .move_btn a {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4F83FC;
+  padding: 14px 83px;
+  background: #FFFFFF;
+  border-radius: 48px;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+#visual_banner .move_btn_box .move_btn a:hover {
+  color: #fff;
+  background-color: #4F83FC;
+}
+
+/*===== coala_merit, 코알라로 코딩을 배워야하는이유 =====*/
+#coala_merit {
+  width: 100%;
+  max-width: 1920px;
+  height: 570px;
+  padding: 80px 0;
+  background-color: #fff;
+}
+@media (max-width: 768px) {
+  #coala_merit {
+    height: 707px;
+  }
+}
+#coala_merit .coala_merit_item {
+  text-align: center;
+}
+#coala_merit .coala_merit_item .coala_merit_point_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  #coala_merit .coala_merit_item .coala_merit_point_flex {
+    flex-wrap: wrap;
+  }
+}
+#coala_merit .coala_merit_item .coala_merit_point_flex .coala_merit_category {
+  width: 100%;
+  min-width: 160px;
+  max-width: 212px;
+  height: 278px;
+  padding: 24px 18px 31px 17px;
+  box-sizing: border-box;
+  background-color: #F1F5FF;
+  border-radius: 28px;
+  transition-duration: 0.3s;
+}
+#coala_merit .coala_merit_item .coala_merit_point_flex .coala_merit_category:hover {
+  transition: all ease 0.3s;
+  transform: translateY(-10px);
+  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.16);
+}
+@media (max-width: 768px) {
+  #coala_merit .coala_merit_item .coala_merit_point_flex .coala_merit_category {
+    width: 50%;
+    height: 210px;
+  }
+}
+#coala_merit .coala_merit_item .coala_merit_point_flex .coala_merit_category .coala_merit_info .coala_merit_tit {
+  padding: 8px 0;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #121212;
+}
+@media (max-width: 768px) {
+  #coala_merit .coala_merit_item .coala_merit_point_flex .coala_merit_category .coala_merit_info .coala_merit_tit {
+    font-size: 1.8rem;
+  }
+}
+#coala_merit .coala_merit_item .coala_merit_point_flex .coala_merit_category .coala_merit_info .coala_merit_desc {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #545454;
+}
+@media (max-width: 768px) {
+  #coala_merit .coala_merit_item .coala_merit_point_flex .coala_merit_category .coala_merit_info .coala_merit_desc {
+    text-align: center;
+    white-space: inherit;
+    font-size: 1.2rem;
+  }
+}
+
+/*===== coala_question, 4차산업혁명 ~ 강의문의하기 =====*/
+#coala_ad_area {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 140px 0;
+  background-color: #E7EEFE;
+  /*===== 4차산업 ~ Swiper 스와이퍼 슬라이드 =====*/
+  /*스와이퍼 css 넣기*/
+}
+@media (max-width: 1339px) {
+  #coala_ad_area {
+    height: 674px;
+    padding: 80px 0;
+  }
+}
+#coala_ad_area .coala_ad_inner {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media (max-width: 1339px) {
+  #coala_ad_area .coala_ad_inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+#coala_ad_area .coala_ad_content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 250px;
+}
+@media (max-width: 1339px) {
+  #coala_ad_area .coala_ad_content {
+    flex: none;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    padding-left: 0;
+  }
+}
+#coala_ad_area .coala_ad_content .coala_ad_tit {
+  width: 500px;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+@media (max-width: 1339px) {
+  #coala_ad_area .coala_ad_content .coala_ad_tit {
+    flex: none;
+    position: absolute;
+    top: 80px;
+    text-align: center;
+  }
+}
+#coala_ad_area .coala_ad_content .coala_ad_tit h3 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: #121212;
+}
+#coala_ad_area .coala_ad_content .coala_ad_desc {
+  width: 522px;
+  font-size: 2rem;
+  color: #545454;
+  margin-bottom: 50px;
+}
+#coala_ad_area .coala_ad_content .coala_ad_desc .coala_ad_desc_box p {
+  line-height: 140%;
+}
+@media (max-width: 1339px) {
+  #coala_ad_area .coala_ad_content .coala_ad_desc .coala_ad_desc_box {
+    position: absolute;
+    top: 450px;
+  }
+}
+#coala_ad_area .coala_ad_content .coala_ad_btn {
+  width: 453px;
+  flex-wrap: nowrap;
+}
+@media (max-width: 1339px) {
+  #coala_ad_area .coala_ad_content .coala_ad_btn {
+    position: absolute;
+    top: 450px;
+  }
+}
+#coala_ad_area .coala_ad_content .coala_ad_btn a {
+  flex-wrap: nowrap;
+  font-size: 2.4rem;
+  color: #fff;
+  padding: 15px 160px;
+  border-radius: 4px;
+  background-color: #4F83FC;
+}
+#coala_ad_area .coala_ad_content .coala_ad_btn a:hover {
+  background-color: #316EFE;
+}
+#coala_ad_area .coala_ad_content .coala_ad_slide {
+  width: 50%;
+  max-width: 744px;
+  border-radius: 16px;
+}
+@media (max-width: 1339px) {
+  #coala_ad_area .coala_ad_content .coala_ad_slide {
+    order: 2;
+    position: absolute;
+    top: 186px;
+    height: 230px;
+  }
+}
+#coala_ad_area .coala_ad_content .coala_ad_slide .adSwiper {
+  width: 744px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: red;
+}
+#coala_ad_area .swiper {
+  width: 100%;
+  height: 100%;
+}
+#coala_ad_area .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+#coala_ad_area .swiper-slide img {
+  display: block;
+  width: 80%;
+  height: 363px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+@media (max-width: 1339px) {
+  #coala_ad_area .swiper-slide img {
+    width: 80%;
+    height: 230px;
+  }
+}
+#coala_ad_area .swiper-slide {
+  width: 100%;
+}
+#coala_ad_area .swiper-slide:nth-child(2n) {
+  width: 100%;
+}
+#coala_ad_area .swiper-slide:nth-child(3n) {
+  width: 100%;
+}
+
+/*===== student_portfolio, 학생포트폴리오 =====*/
+#student_portfolio {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: auto;
+  background-color: #fff;
+  padding: 80px 0;
+}
+#student_portfolio .student_portfolio_inner {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  min-width: 360px;
+  max-width: 1440px;
+}
+#student_portfolio .student_pfolio_tit {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+#student_portfolio .student_pfolio_tit h3 {
+  font-size: 3.6rem;
+}
+#student_portfolio .student_pfolio_tit a {
+  font-size: 1.6rem;
+  vertical-align: center;
+}
+#student_portfolio .student_pfolio_tit a:hover {
+  color: #4F83FC;
+}
+#student_portfolio .student_pfolio_box {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  #student_portfolio .student_pfolio_box {
+    flex-wrap: wrap;
+  }
+}
+#student_portfolio .student_pfolio_box .student_pfolio_list {
+  width: 25%;
+  height: auto;
+  flex-basis: 271px;
+  flex-shrink: 1;
+  border: 1px solid #D7D7D7;
+  border-radius: 16px;
+  transition-duration: 0.3s;
+}
+#student_portfolio .student_pfolio_box .student_pfolio_list:hover {
+  transition: all ease 0.3s;
+  transform: translateY(-10px);
+  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.16);
+}
+@media (max-width: 768px) {
+  #student_portfolio .student_pfolio_box .student_pfolio_list {
+    flex-basis: 160px;
+  }
+}
+#student_portfolio .student_pfolio_box .student_pfolio_list .student_pfolio_img {
+  height: 121px;
+  border-radius: 16px 16px 0 0;
+  background-color: #4F83FC;
+}
+#student_portfolio .student_pfolio_box .student_pfolio_list .student_pfolio_info {
+  height: 76px;
+  padding: 12px 12px 19px;
+  border-radius: 16px;
+  background: #fff;
+}
+#student_portfolio .student_pfolio_box .student_pfolio_list .student_pfolio_info .student_pfolio_flex .student_pfolio_name {
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+#student_portfolio .student_pfolio_box .student_pfolio_list .student_pfolio_info .student_pfolio_flex .student_pfolio_name:hover a {
+  color: #4F83FC;
+}
+#student_portfolio .student_pfolio_box .student_pfolio_list .student_pfolio_info .student_pfolio_flex .student_user_info:hover a {
+  cursor: pointer;
+}
+#student_portfolio .student_pfolio_box .student_pfolio_list .student_pfolio_info .student_pfolio_flex .student_user_info .student_user_name {
+  display: flex;
+  gap: 3px;
+}
+#student_portfolio .student_pfolio_box .student_pfolio_list .student_pfolio_info .student_pfolio_flex .student_user_info .student_user_name .user_thumbimg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #ccc;
+}
+#student_portfolio .student_pfolio_box .student_pfolio_list .student_pfolio_info .student_pfolio_flex .student_user_info .student_user_name .user_id {
+  font-size: 1.4rem;
+  line-height: 16px;
+  color: #545454;
+  padding: 2px 8px;
+}
+
+/*===== student_pfolio_popup 포트폴리오 팝업 =====*/
+/*
+.student_pfolio_popup {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%; 
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+
+  .pfolio_popup_btn {
+    font-size: 3.6rem;
+    color: #000;
+    text-align: center;
+  }
+} 
+*/
+/*===== coala_news, 코알라소식 =====*/
+#coala_news {
+  width: 100%;
+  max-width: 1920px;
+  height: 714px;
+  background-color: #F7F7F7;
+}
+#coala_news .coala_news_inner {
+  padding: 100px 0;
+}
+#coala_news .coala_news_head {
+  text-align: center;
+}
+#coala_news .coala_news_head h3 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#coala_news .coala_news_head p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+#coala_news .coala_news_slide {
+  width: 100%;
+  margin: 0 auto;
+  height: 306px;
+}
+#coala_news .coala_news_slide .newsSwiper .swiper-slide {
+  height: 260px;
+  border-radius: 20px;
+}
+#coala_news .coala_news_slide .swiper {
+  width: 100%;
+  height: 100%;
+}
+#coala_news .coala_news_slide .swiper-slide {
+  width: 100%;
+  height: 260px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#coala_news .coala_news_slide .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+#coala_news .coala_news_slide .swiper-slide {
+  width: 448px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}
+#coala_news .coala_news_btn {
+  text-align: center;
+  padding-top: 40px;
+}
+#coala_news .coala_news_btn a {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff;
+  padding: 18px 60px 18px 60px;
+  background-color: #4F83FC;
+  border-radius: 52px;
+}
+#coala_news .coala_news_btn a:hover {
+  background-color: #316EFE;
+}
+
+/*===== coala_contact, 코알라에 문의하기 =====*/
+#coala_contact {
+  width: 100%;
+  max-width: 1920px;
+  height: 350px;
+  padding: 61px 0 80px;
+  background: url(../assets/image/contact_bg.png) no-repeat center;
+  background-color: #ccc;
+}
+#coala_contact .coala_contact_inner {
+  color: #fff;
+  text-align: center;
+}
+#coala_contact .coala_contact_inner .coala_contact_flex h3 {
+  font-weight: 500;
+  font-size: 4.4rem;
+  line-height: 70px;
+  margin-bottom: 16px;
+}
+#coala_contact .coala_contact_inner .coala_contact_flex p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #DADADA;
+  margin-bottom: 36px;
+}
+#coala_contact .coala_contact_inner .coala_contact_flex .contact_btn {
+  padding: 18px 86px;
+  border-radius: 52px;
+  background-color: #4F83FC;
+}
+#coala_contact .coala_contact_inner .coala_contact_flex .contact_btn:hover {
+  background-color: #316EFE;
+}
+#coala_contact .coala_contact_inner .coala_contact_flex .contact_btn a {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+/*===== footer, 푸터 =====*/
+#footer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  padding: 40px 0;
+  background-color: #1A2139;
+}
+#footer .footer_inner {
+  width: 100%;
+  max-width: 1440px;
+  padding: 24px;
+  margin: 0 auto;
+}
+#footer .foot_nav .foot_nav_group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  #footer .foot_nav .foot_nav_group {
+    gap: 12px;
+  }
+}
+#footer .foot_nav .foot_nav_group a {
+  flex: none;
+  padding: 8px;
+  font-size: 1.4rem;
+  letter-spacing: 1%;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+#footer .foot_nav .foot_nav_group a strong {
+  font-weight: 400;
+}
+#footer .coala_corp .corp_name {
+  margin-bottom: 14px;
+}
+#footer .coala_corp .corp_name span {
+  font-size: 1.6rem;
+  color: #fff;
+}
+#footer .coala_corp_address_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+#footer .coala_corp_address_box .coala_address, #footer .coala_corp_address_box .coala_corp_info_box {
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  #footer .coala_corp_address_box .coala_address, #footer .coala_corp_address_box .coala_corp_info_box {
+    flex-wrap: wrap;
+  }
+}
+#footer .coala_corp_address_box .coala_address li, #footer .coala_corp_address_box .coala_corp_info_box li {
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 140%;
+  color: #f0f0f0;
+}
+#footer .foot_line {
+  width: 100%;
+  height: 1px;
+  background: #545454;
+}
+#footer .foot_sns {
+  padding: 32px 0 24px;
+}
+#footer .foot_sns .foot_sns_flex {
+  display: flex;
+  gap: 20px;
+}
+#footer .coala_cs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+}
+#footer .coala_cs .coala_cs_number {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 100%;
+  color: #fff;
+  margin-bottom: 6px;
+}
+#footer .coala_cs .coala_cs_time {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+#footer .coala_cs .coala_cs_kakaotalk {
+  margin-bottom: 16px;
+}
+#footer .coala_cs .coala_cs_kakaotalk a {
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: #fff;
+}
+#footer .coala_copyright p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #ccc;
+}

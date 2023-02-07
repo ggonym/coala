@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코알라</title>
+ 
+
+  <!--메타태그-->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thecoala.io/">
+  <meta property="og:title" content="코알라">
+  <meta property="og:image" content="/image/ogimage.jpg">
+  <meta property="og:description" content="코딩으로 알고리즘을 라이징하자">
+  <meta property="og:site_name" content="코알라">
+  <meta property="og:locale" content="KR">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+   <!-- css -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="shortcut icon" href="image/favicon 196_196.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+
+   <!--swiper-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+   <!-- AOS 라이브러리 불러오기-->
+   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+   
+</head>
+
+<div id="wrap" >
+
+    <!--header, 헤더-->
+    <div id="header">
+      <div class="header_inner">
+        <div class="gnb_wrap">
+          <div class="logo_area">
+            <a href="/">
+              <img src="assets/image/logo_black.png" alt="">
+            </a>
+          </div>
+          <div id="gnb">
+            <ul class="nav_list">
+              <li class="nav_menu">
+                <a href="">소개</a>
+              </li>
+              <li class="nav_menu">
+                <a href="">커리큘럼</a>
+              </li>
+              <li class="nav_menu">
+                <a href="">묻고답하기</a>
+              </li>
+              <li class="nav_menu">
+                <a href="">포트폴리오</a>
+              </li>
+              <li class="nav_menu">
+                <a href="">소식</a>
+              </li>
+              <li class="nav_menu">
+                <a href="">다운받기</a>
+              </li>
+              <li class="nav_menu">
+                <a href="">강의</a>
+              </li>
+            </ul>
+          </div>
+        </div> 
+        
+        <div class="right_menu">
+          <div class="join">
+            <a href="">회원가입</a>
+          </div>
+
+          <div class="class_registration">
+            <a href="">수강신청</a>
+          </div>
+
+          <div class="login">
+            <a href="">로그인</a>
+          </div>
+
+          <div class="mobile_open_btn">            
+            <i class="fa-solid fa-bars fa-2x"></i>            
+          </div>
+        </div>      
+      </div>
+    </div>
+
+    <!-- mobile_menu 모바일 메뉴-->
+    <div id="mobile_menu_wrap">
+      <div id="mobile_right_box">
+        <div class="mobile_right_inner">
+          <div class="mobile_right_header">
+            <div class="mobile_right_logo">
+              <img src="assets/image/logo_black.png" alt="코알라">
+            </div>
+            <div class="mobile_menu_close">
+              <div class="mobile_menu_close_box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#D9D9D9" d="M0 0h24v24H0z"/></mask><g mask="url(#a)"><path fill="#1C1B1F" d="M6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5l5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19Z"/></g>
+                </svg>
+              </div>  
+
+            </div>            
+          </div>
+          <div class="line"></div>
+  
+          <div id="mobile_gnb">
+            <div class="mobile_gnb_inner">
+              <ul class="mobile_menu_box">
+                <li class="mobile_menu_list"><a href="">로그인</a></li>
+                <li class="mobile_menu_list"><a href="">About</a></li>
+                <li class="mobile_menu_list"><a href="">커리큘럼</a></li>
+                <li class="mobile_menu_list"><a href="">묻고답하기</a></li>
+                <li class="mobile_menu_list"><a href="">프로젝트보러가기</a></li>
+                <li class="mobile_menu_list"><a href="">NEWS</a></li>
+                <li class="mobile_menu_list"><a href="">다운받기</a></li>
+                <li class="mobile_menu_list"><a href="">강의</a></li>
+              </ul>
+            </div>
+          </div>
+  
+        </div>
+        <div class="mobile_right_bg"></div>
+      </div>
+    </div>  
+
+
+    <!--visual_banner, 코딩실력을 알고리즘으로 라이징 하자-->
+    <div id="visual_banner">
+      <div class="visual_banner_inner">
+        <div class="visual_banner_tit">
+         
+        </div>
+        <div class="move_btn_box">
+          <div class="move_btn">
+            <a href="">코알라 바로가기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--coala_merit, 코알라로 코딩을 배워야하는이유-->
+    <div id="coala_merit"  data-aos="fade-up" data-aos-duration="1400" data-aos-offset="200" >
+      <div class="coala_merit_inner" >
+        <div class="content_tit">
+          <h3>코알라로 코딩을 배워야 하는 이유</h3>
+          <p>학생 중심 맞춤 수업으로 꼼꼼히 지도합니다.</p>
+        </div>
+        <div class="coala_merit_item">
+          <div class="coala_merit_point_flex">
+
+            <div class="coala_merit_category" >
+              <div class="coala_merit_ico">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none"><circle cx="50" cy="50" r="49.5" fill="#fff" stroke="#CFDBF6"/><path fill="#4F83FC" fill-rule="evenodd" d="M39.438 63.27a1.072 1.072 0 0 1-1.516 0L25.287 50.637a1.072 1.072 0 0 1 1.516-1.517l12.635 12.636a1.072 1.072 0 0 1 0 1.516Z" clip-rule="evenodd"/><path fill="#4F83FC" fill-rule="evenodd" d="M39.31 36.358a1.072 1.072 0 0 1 0 1.516L26.675 50.51a1.072 1.072 0 1 1-1.516-1.516l12.635-12.635a1.072 1.072 0 0 1 1.516 0ZM60.564 63.27a1.072 1.072 0 0 0 1.516 0l12.635-12.634a1.072 1.072 0 0 0-1.516-1.517L60.564 61.755a1.072 1.072 0 0 0 0 1.516Z" clip-rule="evenodd"/><path fill="#4F83FC" fill-rule="evenodd" d="M60.69 36.358a1.072 1.072 0 0 0 0 1.516L73.325 50.51a1.072 1.072 0 1 0 1.516-1.516L62.206 36.358a1.072 1.072 0 0 0-1.516 0ZM45.843 60.638a1.072 1.072 0 0 1-.64-1.374l7.333-20.15a1.072 1.072 0 1 1 2.015.734l-7.333 20.15a1.072 1.072 0 0 1-1.375.64Z" clip-rule="evenodd"/></svg>
+              </div>
+              <div class="coala_merit_info">
+                <h4 class="coala_merit_tit"><strong>코딩하기</strong></h4>
+                <p class="coala_merit_desc">
+                  C/C++과 Python을
+                  사용해서 <strong>수준 높은 코딩</strong>을 
+                  할 수 있어요
+                </p>
+              </div>
+            </div>
+
+            <div class="coala_merit_category">
+              <div class="coala_merit_ico">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none"><g clip-path="url(#a)"><g clip-path="url(#b)"><circle cx="50" cy="50" r="49.5" fill="#fff" stroke="#CFDBF6"/><path fill="#4F83FC" fill-rule="evenodd" d="M36.903 29c-2.08 0-3.766 1.628-3.766 3.637v7.25l-3.292 1.886C28.701 42.428 28 43.617 28 44.9v21.544c0 2.008 1.686 3.637 3.767 3.637h36.467c2.08 0 3.766-1.629 3.766-3.637V44.9c0-1.284-.701-2.473-1.845-3.128l-3.462-1.984v-7.152c0-2.009-1.686-3.637-3.767-3.637H36.903Zm29.79 12.712v7.424l3.595-1.757v-2.478c0-.7-.382-1.35-1.006-1.707l-2.589-1.482Zm-1.712 8.26V32.637c0-1.096-.92-1.984-2.054-1.984H36.902c-1.134 0-2.054.888-2.054 1.984v17.35l14.898 7.429 15.234-7.444Zm-31.844-.839V41.81l-2.419 1.385a1.972 1.972 0 0 0-1.006 1.707v2.525l3.425 1.707Zm11.965-14.766a.807.807 0 0 1 0 1.169l-5.448 5.26 5.508 5.32a.807.807 0 0 1 0 1.168.878.878 0 0 1-1.21 0l-6.054-5.845a.804.804 0 0 1-.031-.032.807.807 0 0 1-.029-1.195l6.053-5.845a.878.878 0 0 1 1.21 0Zm10.91 12.917a.878.878 0 0 1-1.211 0 .807.807 0 0 1 0-1.169l5.508-5.319-5.448-5.26a.807.807 0 0 1 0-1.17.878.878 0 0 1 1.21 0l6.054 5.846a.807.807 0 0 1-.029 1.195.87.87 0 0 1-.031.032l-6.053 5.845Zm-8.65-2.2a.819.819 0 0 0 .51 1.06.865.865 0 0 0 1.098-.495l3.513-9.32a.819.819 0 0 0-.511-1.06.865.865 0 0 0-1.098.494l-3.513 9.32Zm-17.65 4.202v17.159c0 1.095.92 1.984 2.055 1.984h36.467c1.134 0 2.054-.889 2.054-1.984V49.232l-20.158 9.85a.884.884 0 0 1-.78-.003l-19.638-9.793Z" clip-rule="evenodd"/></g></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath><clipPath id="b"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg>
+              </div>
+              <div class="coala_merit_info">
+                <h4 class="coala_merit_tit"><strong>소스전송</strong></h4>
+                <p class="coala_merit_desc">
+                  내가 코딩한 소스를 
+                  선생님에게 <strong>즉시 전송</strong>이 
+                  가능해요
+                </p>
+              </div>
+            </div>
+
+            <div class="coala_merit_category"  >
+              <div class="coala_merit_ico">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none"><g clip-path="url(#a)"><g clip-path="url(#b)"><circle cx="50" cy="50" r="49.5" fill="#fff" stroke="#CFDBF6"/><path fill="#4F83FC" fill-rule="evenodd" d="M69.634 30.693h-30.33a.64.64 0 0 0-.646.634v19.888c0 .35.29.635.646.635H50.08c.614 0 1.2.258 1.608.71l2.887 3.195 2.888-3.195c.408-.452.993-.71 1.608-.71h10.562a.64.64 0 0 0 .645-.635V31.327a.64.64 0 0 0-.645-.634ZM39.304 29c-1.307 0-2.367 1.042-2.367 2.327v9.36h-5.74A3.204 3.204 0 0 0 28 43.9v20.128a3.204 3.204 0 0 0 3.196 3.212h10.485l3.37 3.81c.678.767 1.87.767 2.548 0l3.37-3.81h10.272a3.204 3.204 0 0 0 3.197-3.212V53.542h5.196C70.94 53.542 72 52.5 72 51.215V31.327C72 30.042 70.94 29 69.634 29h-30.33Zm23.429 24.542h-3.661a.433.433 0 0 0-.322.142l-3.53 3.907a.87.87 0 0 1-1.287 0l-3.53-3.907a.433.433 0 0 0-.322-.142H39.304c-1.307 0-2.367-1.042-2.367-2.327V42.4h-5.74c-.825 0-1.492.672-1.492 1.5v20.128c0 .828.668 1.499 1.491 1.499h10.676c.365 0 .713.157.956.43l3.497 3.955 3.498-3.954c.242-.274.59-.431.955-.431h10.463c.824 0 1.492-.671 1.492-1.5V53.543ZM43.125 36.05c0-.476.379-.862.846-.862H64.71c.467 0 .846.386.846.862a.855.855 0 0 1-.846.863H43.972a.855.855 0 0 1-.847-.863Zm0 5.177c0-.477.396-.863.885-.863h15.485c.489 0 .885.386.885.863a.874.874 0 0 1-.885.863H44.01a.874.874 0 0 1-.885-.863Zm.863 4.313a.863.863 0 0 0 0 1.726h20.706a.863.863 0 1 0 0-1.726H43.988Z" clip-rule="evenodd"/></g></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath><clipPath id="b"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg>
+              </div>
+              <div class="coala_merit_info">
+                <h4 class="coala_merit_tit"><strong>피드백</strong></h4>
+                <p class="coala_merit_desc">
+                  <storng>실시간</storng>으로 피드백을
+                  받으며 수업할 수 있어요
+                </p>
+              </div>
+            </div>
+
+            <div class="coala_merit_category" >
+              <div class="coala_merit_ico">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none"><g clip-path="url(#a)"><g clip-path="url(#b)"><circle cx="50" cy="50" r="49.5" fill="#fff" stroke="#CFDBF6"/><path fill="#4F83FC" fill-rule="evenodd" d="M49.833 57.706c8.767 0 15.873-7.107 15.873-15.873 0-8.767-7.107-15.873-15.873-15.873-8.767 0-15.873 7.106-15.873 15.873s7.106 15.873 15.873 15.873Zm0 1.96c9.849 0 17.833-7.984 17.833-17.833C67.666 31.984 59.682 24 49.833 24 39.984 24 32 31.984 32 41.833c0 9.849 7.984 17.833 17.833 17.833Z" clip-rule="evenodd"/><path fill="#4F83FC" fill-rule="evenodd" d="M61.2 73.84V53.396h1.96V73.84c0 1.753-1.984 2.773-3.41 1.753l-9.329-6.672-9.328 6.672c-1.426 1.02-3.41 0-3.41-1.753V54.179h1.96V73.84c0 .159.18.252.31.159l9.442-6.753a1.764 1.764 0 0 1 2.052 0L60.89 74c.13.093.31 0 .31-.16Zm-10.665-5ZM50.03 34.821l-1.569 3.288a3.136 3.136 0 0 1-2.42 1.758l-3.611.476 2.642 2.508c.77.73 1.117 1.801.924 2.845l-.663 3.582 3.201-1.738a3.135 3.135 0 0 1 2.992 0l3.201 1.738-.663-3.582a3.135 3.135 0 0 1 .924-2.845l2.642-2.508-3.611-.476a3.136 3.136 0 0 1-2.42-1.758L50.03 34.82Zm1.061-2.326c-.426-.893-1.696-.893-2.122 0l-2.276 4.77c-.172.36-.513.607-.908.66l-5.24.69c-.98.13-1.373 1.337-.656 2.018l3.833 3.64c.29.273.42.675.347 1.066l-.962 5.197c-.18.973.848 1.72 1.717 1.248l4.645-2.521c.35-.19.772-.19 1.122 0l4.645 2.52c.87.473 1.897-.274 1.717-1.247l-.962-5.197a1.176 1.176 0 0 1 .347-1.067l3.833-3.639c.717-.68.325-1.889-.656-2.018l-5.24-.69a1.176 1.176 0 0 1-.907-.66l-2.277-4.77Z" clip-rule="evenodd"/></g></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath><clipPath id="b"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg>
+              </div>
+              <div class="coala_merit_info">
+                <h4 class="coala_merit_tit"><strong>성취감</strong></h4>
+                <p class="coala_merit_desc">
+                  재미있게 코딩을 완성하며
+                  <strong>집중력</strong>과 <strong>성취감</strong>을 느껴봐요
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--coala_question, 4차산업혁명 ~ 강의문의하기-->
+    <div id="coala_ad_area">
+      <div class="coala_ad_inner">
+        <div class="coala_ad_content"  >
+          <div class="coala_ad_tit" data-aos="fade-up" data-aos-duration="1000">
+            <h3>4차 산업혁명의 핵심 SW
+              코알라와 함께 시작하세요
+            </h3>
+          </div>
+
+          <div class="coala_ad_desc" data-aos="fade-up" data-aos-duration="1000" >
+            <div class="coala_ad_desc_box">
+              <p>
+                코알라 시스템 교육은 대치동에서 검증받은, <br>
+                학생 맞춤형 SW 교육입니다. 수학 연산 실수를 줄이고<br>
+                정확도와 효율성을 높여 문제를 해결력을 길러줍니다.
+             </p>
+            </div>
+          </div>
+          <div class="coala_ad_btn" data-aos="fade-up" data-aos-duration="1000">
+            <a href=""> 강의문의하기</a>
+          </div>
+        </div>
+        
+        <!-- Swiper -->
+      <div class="coala_ad_slide"> 
+        <div class="swiper adSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/image/coala_ad-01.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/image/coala_ad-01.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/image/coala_ad-01.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/image/coala_ad-01.png" alt=""></div>            
+          </div>
+          <div class="swiper-pagination" style="position: absolute; bottom: 30px;"></div>
+        </div>
+      </div> 
+    
+  </div>
+</div>  
+          <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".adSwiper", {
+          slidesPerView: "auto",
+          
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
+
+    
+
+    <!--student_portfolio, 학생포트폴리오-->
+    <div id="student_portfolio" >
+      <div class="student_portfolio_inner">
+        <div class="student_pfolio_tit">
+          <h3>학생포트폴리오</h3>
+          <a href="">더보기 ></a>
+        </div>
+
+        <div class="student_pfolio_box" data-aos="fade-up" data-aos-duration="1800">
+          
+          <div class="student_pfolio_list">
+            <div class="student_pfolio_img">
+             <a href="">
+              <img src="" alt="">
+            </a>            
+            </div>
+            <div class="student_pfolio_info">
+              <div class="student_pfolio_info_inner">
+                <ul class="student_pfolio_flex ">
+                  <li class="student_pfolio_name">
+                    <a href="">내가만든테트리스</a>
+                  </li>
+                  <li class="student_user_info">
+                    <a class="student_user_name">
+                      <span class="user_thumbimg"></span>
+                      <span class="user_id">lee_2</span>
+                    </a>                    
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="student_pfolio_list">
+            <div class="student_pfolio_img">
+             <a href="">
+              <img src="" alt="">
+            </a>
+            </div>
+            <div class="student_pfolio_info">
+              <div class="student_pfolio_info_inner">
+                <ul class="student_pfolio_flex ">
+                  <li class="student_pfolio_name">
+                    <a href="">내가만든테트리스</a>
+                  </li>
+                  <li class="student_user_info">
+                    <a class="student_user_name">
+                      <span class="user_thumbimg"></span>
+                      <span class="user_id">lee_2</span>
+                    </a>                    
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="student_pfolio_list">
+            <div class="student_pfolio_img">
+             <a href="">
+              <img src="" alt="">
+            </a>
+            </div>
+            <div class="student_pfolio_info">
+              <div class="student_pfolio_info_inner">
+                <ul class="student_pfolio_flex ">
+                  <li class="student_pfolio_name">
+                    <a href="">내가만든테트리스</a>
+                  </li>
+                  <li class="student_user_info">
+                    <a class="student_user_name">
+                      <span class="user_thumbimg"></span>
+                      <span class="user_id">lee_2</span>
+                    </a>                    
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="student_pfolio_list">
+            <div class="student_pfolio_img">
+             <a href="">
+              <img src="" alt="">
+            </a>
+            </div>
+            <div class="student_pfolio_info">
+              <div class="student_pfolio_info_inner">
+                <ul class="student_pfolio_flex ">
+                  <li class="student_pfolio_name">
+                    <a href="">내가만든테트리스</a>
+                  </li>
+                  <li class="student_user_info">
+                    <a class="student_user_name">
+                      <span class="user_thumbimg"></span>
+                      <span class="user_id">lee_2</span>
+                    </a>                    
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <!--student_pfolio_popup 포트폴리오 팝업-->
+    <!-- <div class="student_pfolio_popup">
+      <div class="pfolio_popup_btn">
+        닫기
+      </div>
+    </div>
+  -->
+    <!--coala_news, 코알라소식-->
+    <div id="coala_news">
+      <div class="coala_news_inner">
+        <div class="coala_news_head">
+          <h3>코알라 소식</h3>
+          <p>다양한 정보와 소식을 만나보세요</p>
+        </div>
+
+        <div class="coala_news_slide">
+       
+           <!-- Swiper -->
+         <div class="swiper newsSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
+              <div class="swiper-slide" ><img src="assets/image/news_image_01.png" alt=""></div>
+              <div class="swiper-slide" ><img src="assets/image/news_image_01.png" alt=""></div>
+              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
+              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
+              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
+              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
+              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
+              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
+            </div>
+            
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <!-- Swiper JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>  -->
+
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".newsSwiper", {
+          slidesPerView: "auto",
+          centeredSlides: true,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script> 
+
+      <div class="coala_news_btn"  >
+        <a href="">더 많은 소식 보기</a>
+      </div>
+
+
+      </div>
+    </div>
+
+    <!--coala_contact, 코알라에 문의하기-->
+    <div id="coala_contact">
+      <div class="coala_contact_inner">
+        <div class="coala_contact_flex"  >
+          <h3>코알라에 문의하기</h3>
+          <p>
+            코알라 서비스를 도입하고 싶으신가요?<br>
+            코알라팀에 연락하는 가장 쉬운 방법을 알려드려요!
+          </p>
+          <button class="contact_btn" data-aos="fade-up" data-aos-duration="1400" >
+            <a href="">문의하기</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer, 푸터 -->
+    <div id="footer">
+      <div class="footer_inner">
+        <div class="foot_nav">
+          <ul class="foot_nav_group">
+            <li class="foot_nav_list"><a href="">홈</a></li>
+            <li class="foot_nav_list"><a href="">코알라소개</a></li>
+            <li class="foot_nav_list"><a href=""><strong>개인정보처리방침</strong></a></li>
+            <li class="foot_nav_list"><a href="">이용약관</a></li>
+            <li class="foot_nav_list"><a href="">운영정책</a></li>
+          </ul>
+        </div>
+
+        <div class="coala_corp">
+          <div class="coala_corp_inner">
+            <div class="corp_name">
+              <span>(주)코알라</span>
+            </div>
+            <div class="coala_corp_address_box">  
+              <ul class="coala_address">
+                <li>대표: 손유상, 안태민</li>
+                <li>사업자등록번호: 603-88-02673</li>
+                <li>서울특별시 강남구 삼성로64길 46 오송빌딩 2층</li>
+              </ul>            
+                     
+              <ul class="coala_corp_info_box">
+                <li>개인정보책임관리자: 홍길동</li>
+                <li>thecoala_teacher@thecoala.io</li>
+                <li>통신판매업신고번호: 제000-서울강남-00000호</li>
+              </ul>
+            </div>
+        </div>
+            <div class="foot_line"></div>
+
+            <div class="foot_sns">
+              <ul class="foot_sns_flex">
+                <li><a href=""><img src="assets/image/naverBand_ico.png" alt="네이버밴드이동"></a></li>
+                <li><a href=""><img src="assets/image/instagram_ico.png" alt="인스타그램이동"></a></li>
+                <li><a href=""><img src="assets/image/kakaotalk_ico.png" alt="카카오톡채널이동"></a></li>
+                <li><a href=""><img src="assets/image/youtube_ico.png" alt="유튜브채널이동"></a></li>
+              </ul>
+            </div>
+            <div class="coala_cs">
+              <div class="coala_cs_number">수강문의: 02-553-9969</div>
+              <div class="coala_cs_time">문의시간: 평일 10: 00 - 18:00 (점심시간: 평일 12시~13시 / 주말 및 공휴일 휴무)                
+              </div>
+              <div class="coala_cs_kakaotalk">
+                <a href="">카카오톡 채널:  @코알라</a>
+              </div>
+            </div>
+            <div class="coala_copyright">
+              <p>Copyright © 2023 The Coala Inc. All rights reserved</p>
+            </div>
+          </div>
+        
+
+      </div>
+    </div>
+
+<!--wrap end div-->  
+  </div>  
+  
+  <!--js-->
+  <script src="js/main.js" ></script>
+
+   <!-- AOS 스크립트 시작 -->
+   <script> 
+    AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+  </script>
+   
+</body>
+</html>
