@@ -134,6 +134,7 @@ body {
   border-radius: 4px;
 }
 #header .right_menu .join a:hover {
+  color: #fff;
   background-color: #316EFE;
 }
 #header .right_menu .mobile_open_btn {

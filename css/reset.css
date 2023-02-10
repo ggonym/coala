@@ -35,3 +35,13 @@ input[type="tel"],
 input[type="date"], 
 textarea { -webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-border-radius:0; outline:0;}
 textarea { resize: none;}
+
+
+
+
+
+input:focus::-webkit-input-placeholder {color:transparent; }
+input:focus::placeholder { color: transparent;}
+input:focus { border-color: #4F83FC ;}
+
+
