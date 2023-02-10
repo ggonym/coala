@@ -143,7 +143,7 @@
         </div>
         <div class="move_btn_box">
           <div class="move_btn">
-            <a href="">코알라 바로가기</a>
+            <a href="">다운받기</a>
           </div>
         </div>
       </div>
@@ -194,7 +194,7 @@
               <div class="coala_merit_info">
                 <h4 class="coala_merit_tit"><strong>피드백</strong></h4>
                 <p class="coala_merit_desc">
-                  <storng>실시간</storng>으로 피드백을
+                  <strong>실시간</strong>으로 피드백을
                   받으며 수업할 수 있어요
                 </p>
               </div>
@@ -225,7 +225,7 @@
       <div class="coala_ad_inner">
         <div class="coala_ad_content"  >
           <div class="coala_ad_tit" data-aos="fade-up" data-aos-duration="1000">
-            <h3>4차 산업혁명의 핵심 SW
+            <h3>4차 산업혁명의 핵심 SW<br>
               코알라와 함께 시작하세요
             </h3>
           </div>
@@ -266,7 +266,7 @@
         var swiper = new Swiper(".adSwiper", {
           slidesPerView: "auto",
           
-          spaceBetween: 30,
+          spaceBetween: 24,
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -405,14 +405,10 @@
          <div class="swiper newsSwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
-              <div class="swiper-slide" ><img src="assets/image/news_image_01.png" alt=""></div>
-              <div class="swiper-slide" ><img src="assets/image/news_image_01.png" alt=""></div>
-              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
-              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
-              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
-              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
-              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
-              <div class="swiper-slide"><img src="assets/image/news_image_01.png" alt=""></div>
+              <div class="swiper-slide" ><img src="assets/image/news_image_02.png" alt=""></div>
+              <div class="swiper-slide" ><img src="assets/image/news_image_03.png" alt=""></div>
+              <div class="swiper-slide"><img src="assets/image/news_image_04.png" alt=""></div>
+              
             </div>
             
             <div class="swiper-pagination"></div>
@@ -426,9 +422,10 @@
       <script>
         var swiper = new Swiper(".newsSwiper", {
           slidesPerView: "auto",
-          centeredSlides: true,
+          centeredSlides: false, /*true에서 flase로 변경*/
           spaceBetween: 30,
-          loop: true,
+          loop: false, /*loop: true 잠시 멈춤*/
+         
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -453,7 +450,7 @@
             코알라 서비스를 도입하고 싶으신가요?<br>
             코알라팀에 연락하는 가장 쉬운 방법을 알려드려요!
           </p>
-          <button class="contact_btn" data-aos="fade-up" data-aos-duration="1400" >
+          <button class="contact_btn" data-aos="fade-up" data-aos-duration="1400" data-aos-anchor-placement="top-bottom" >
             <a href="">문의하기</a>
           </button>
         </div>
