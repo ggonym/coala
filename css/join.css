@@ -23,24 +23,25 @@ body {
 #wrap {
   width: 100%;
   height: 100%;
-  min-width: 360px;
   max-width: 1920px;
   margin: 0 auto;
 }
 
 /*===== join_onatinaer, 가입폼 =====*/
 #join_container {
-  width: 100%;
-  max-width: 1920px;
-  padding: 0 24px;
+  margin: 0 auto;
+  min-width: 360px;
+  max-width: 440px;
+  padding: 100px 24px;
 }
 #join_container .join_cotainer_inner {
-  width: 100%;
+  width: 320px;
+  margin: 0 auto;
 }
 #join_container .join_header {
   width: 100%;
-  height: 146px;
-  padding: 48px 0;
+  height: auto;
+  padding: 16px 0;
   background: #fff;
 }
 #join_container .join_header .join_header_logo {
@@ -51,7 +52,7 @@ body {
   gap: 10px;
 }
 #join_container .join_header .join_header_logo h2 img {
-  height: 16px;
+  height: 25px;
 }
 #join_container .join_header .join_header_logo p {
   font-size: 1.6rem;
@@ -59,25 +60,20 @@ body {
 #join_container .join_info_container {
   width: 100%;
   max-width: 1920px;
-  padding: 40px 0 100px;
+  padding: 24px 0;
   background-color: #fff;
 }
-#join_container .join_info_container .form_join div {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: center;
-}
-#join_container .join_info_container .form_join div label {
-  display: flex;
-  flex-direction: row;
+#join_container .join_info_container .form_join label {
+  text-align: left;
   font-size: 1.6rem;
-  margin-bottom: 8px;
+  text-indent: 4px;
 }
-#join_container .join_info_container .form_join div label span {
+#join_container .join_info_container .form_join label span {
+  display: block;
+  padding: 2px 0 4px;
   text-align: left;
 }
-#join_container .join_info_container .form_join div input:focus {
+#join_container .join_info_container input:focus {
   border-color: #4F83FC;
 }
 #join_container .join_info_container .join_input {
@@ -89,12 +85,25 @@ body {
   background-color: #fff;
   text-indent: 12px;
 }
+#join_container .join_info_container .user_password_box .join_input {
+  position: relative;
+}
+#join_container .join_info_container .user_password_box .join_input::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/image/ico_noview.png");
+}
 #join_container .join_info_container .join_submit {
-  margin-top: 44px;
+  margin-top: 24px;
 }
 #join_container .join_info_container .join_submit #join_submit_btn {
   width: 320px;
-  height: 48px;
+  height: 52px;
   font-size: 1.6rem;
   font-weight: 700;
   color: #fff;

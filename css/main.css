@@ -286,8 +286,15 @@ body {
     height: 707px;
   }
 }
+#coala_merit .coala_merit_inner {
+  padding: 0 16px;
+}
 #coala_merit .coala_merit_item {
+  width: 100%;
+  min-width: 360px;
+  max-width: 1440px;
   text-align: center;
+  margin: 0 auto;
 }
 #coala_merit .coala_merit_item .coala_merit_point_flex {
   display: flex;
@@ -310,6 +317,7 @@ body {
   background-color: #F1F5FF;
   border-radius: 28px;
   transition-duration: 0.3s;
+  flex: 1 1 40%;
 }
 #coala_merit .coala_merit_item .coala_merit_point_flex .coala_merit_category:hover {
   transition: all ease 0.3s;
@@ -318,6 +326,7 @@ body {
 }
 @media (max-width: 768px) {
   #coala_merit .coala_merit_item .coala_merit_point_flex .coala_merit_category {
+    flex: 1 1 40%;
     width: 50%;
     height: 210px;
   }

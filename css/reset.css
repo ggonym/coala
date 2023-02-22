@@ -39,7 +39,7 @@ textarea { resize: none;}
 
 
 
-
+input::placeholder { font-weight: 400; color: #CBD1D7; }
 input:focus::-webkit-input-placeholder {color:transparent; }
 input:focus::placeholder { color: transparent;}
 input:focus { border-color: #4F83FC ;}
