@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+$main-color: #4F83FC;
+$hover-color: #316EFE;
+$font-color: #121212;
+
+$mobile:599px;
+$tablet:1023px;
+$desktop:1024px;
+
+
+/*반응형 모바일 타블렛 해더 mbtb:mobile, tablet*/
+@mixin mbtb-header{
+  @media (min-width: 0px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+/*반응형 브라우저 크기가 599px 이하일때*/
+@mixin mobile{
+  @media (max-width: $mobile){
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 600이상, 1023px 이하일때*/
+@mixin tablet{
+  @media (min-width: 600px) and (max-width: $tablet){
+    @content;
+  }
+}
+// @mixin tablet{
+//   @media (min-width: $mobile+1) and (max-width: $tablet){
+//     @content;
+//   }
+// }
+/*반응형, 브라우저 크기가 1024이상, 1023px 이하일때*/
+// @mixin tablet{
+//   @media (min-width: $mobile+1) and (max-width: $tablet){
+//     @content;
+//   }
+// }
+
+/*반응형, 브라우저 크기가 1024px 이하일 때*/
+@mixin desktop{
+  @media (max-width: 1600px){
+   @content;
+  }
+}

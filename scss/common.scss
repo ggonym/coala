@@ -1,0 +1,357 @@
+@charset 'utf-8';
+@import 'utils';
+
+* { box-sizing: border-box;}
+a { text-decoration: none; color: #121212;}
+
+body {
+  /*가운데 정렬*/
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+  min-width: 360px;
+  max-width: 1920px;
+  margin: 0 auto;
+  // display: block;
+  // margin-left: auto;
+  // margin-right: auto; 
+//   display: flex;
+//  justify-content: center;
+ 
+}
+
+/*===== header, 헤더 =====*/
+#header {
+  width: 100%;
+  max-width: 1920px;  
+  height: 60px;  
+  background-color: #fff;
+  .header_inner {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 24px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .gnb_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 49px;
+    width: 100%;
+    height: 60px;
+   
+    .logo_area {
+      padding-top: 23px;
+        a {
+        img {          
+          width: 108px;
+          height: 13px;
+        }
+      }
+    }
+    #gnb {
+      height: 60px;
+      flex: none;
+      .nav_list {
+        display: flex;
+        gap: 16px;
+        
+        .nav_menu {
+          a {
+            padding: 8px 8px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 60px;
+            color: #121212;
+            &:hover,&:active, &:focus {
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .right_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+     div a {
+      font-size: 1.6rem;
+      font-weight: 500;   
+      padding: 8px;
+      &:hover {
+        color: $main-color;
+      }
+     }
+    .join {      
+      a {
+        color: #fff;
+        background: #4F83FC;
+        border-radius: 4px;
+        &:hover {
+          color: #fff;
+          background-color: #316EFE;
+        }
+      }
+    }
+    .mobile_open_btn {
+      display: none;
+      
+    }
+  }
+}
+
+/*===== header, 헤더 tablet=====*/
+@media (max-width: 1200px) {
+  #header{
+   #gnb {
+     display: none;
+   }
+   .right_menu {
+     .class_registration, .login {
+       display: none;
+       
+       }
+       .mobile_open_btn {
+         display: block;
+       }
+     }
+   }
+ }
+
+/*===== mobile_menu 모바일 메뉴=====*/
+#mobile_menu_wrap {
+  display: none;
+}
+@media (max-width: 1200px) {
+  #mobile_menu_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    transition: width 2s, height 2s;
+    &:hover {
+      transition-duration: 0.3s;
+    }
+   
+    .mobile_right_inner {
+      position: relative;
+      padding: 0 16px;
+    }
+    #mobile_right_box {
+      position: absolute;
+      right: 0;
+      width: 80%;
+      height: 100vh;
+      background-color: #fff;
+    }
+    .mobile_right_header {
+      display: flex;      
+      justify-content: space-between;
+      width: 100%;
+      height: 60px;
+      padding: 12px 0;
+      background-color: #fff;
+      .mobile_right_logo {
+        height: 60px;
+        padding-top: 11px;
+        img { 
+          height: 13px;            
+        }
+      } 
+      .mobile_menu_close {
+        padding-top: 7px;
+        
+        .mobile_menu_close_box {
+          transition-duration: 0.3s;
+          &:hover {            
+            transform: rotate(90deg);  
+            color: $main-color;        
+          }
+          &:hover path {
+            fill: $main-color ;
+          }
+        }        
+      }     
+    }
+    .line {
+      width: 100%;
+      height: 1px;
+      background: #D9D9D9;;
+    }
+    #mobile_gnb {
+      padding: 14px 2px;
+      .mobile_menu_box {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        .mobile_menu_list {
+          width: 100%;
+          font-weight: 500;
+          font-size: 16px;
+          color: #121212;
+          a {
+            padding: 4px 0;
+            &:hover, &:active, &:focus  {
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/*===== footer, 푸터 =====*/
+#footer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1920px;
+  // height: 449px;
+  height: auto;
+  padding: 40px 0;
+  background-color: #1A2139;
+  .footer_inner {
+    width: 100%;
+    max-width: 1440px;
+    padding: 24px;
+    margin: 0 auto;
+  }
+  .foot_nav {
+
+    .foot_nav_group {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 40px;
+      /* Inside auto layout */
+      flex: none;      
+      order: 0;
+      flex-grow: 0;
+      margin-bottom: 24px;
+      @media (max-width:768px) {
+        gap: 12px;
+      }
+      a {
+        flex: none;
+        padding: 8px;
+        font-size: 1.4rem;
+        letter-spacing: 1%;
+        line-height: 20px;
+        color: #FFFFFF;
+        strong {
+          font-weight: 400;
+        }        
+      }
+    }
+  }
+    .coala_corp {
+      .coala_corp_inner {
+
+      }
+      .corp_name {
+        margin-bottom: 14px;
+        span {
+          font-size: 1.6rem;
+          color: #fff;
+        }
+      }
+    }
+      .coala_corp_address_box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 4px;          
+          margin-bottom: 32px;
+        .coala_address, .coala_corp_info_box {
+          display: flex;
+          gap: 16px;
+          @media (max-width:768px) {
+            flex-wrap: wrap;
+          }
+          li {
+            font-weight: 200;
+            font-size: 14px;
+            line-height: 140%;
+            color: #f0f0f0;
+            
+          }
+        }
+       
+      }
+      .foot_line {
+        width: 100%;
+        height: 1px;
+        background: #545454;
+      }
+      .foot_sns {        
+        padding: 32px 0 24px;
+        .foot_sns_flex {
+          display: flex;
+          gap: 20px;
+        }
+      }
+      .coala_cs {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 4px;
+        .coala_cs_number {
+          font-weight: 600;
+          font-size: 1.8rem;
+          line-height: 100%;
+          color: #fff;
+          margin-bottom: 6px;
+        }
+        .coala_cs_time {
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: #ccc;
+          margin-bottom: 4px;
+        }
+        .coala_cs_kakaotalk {
+          margin-bottom: 16px;
+          a {            
+          font-size: 1.4rem;
+          font-weight: 200;
+          color: #fff;
+          }
+        }        
+      }
+      .coala_copyright {
+        p {
+          font-size: 1.2rem;
+          font-weight: 200;
+          color: #ccc;
+        }
+      }
+      
+}
