@@ -19,15 +19,16 @@
   <meta property="og:image:height" content="630">
 
    <!-- css -->
+   <link rel="shortcut icon" href="image/favicon 196_196.png" type="image/x-icon">
+   <link rel="stylesheet" href="css/reset.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
-   <link rel="stylesheet" href="css/reset.css">
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="shortcut icon" href="image/favicon 196_196.png" type="image/x-icon">
+   
+   <link rel="stylesheet" href="css/main.css">  
+   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />    
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"> 
   
 
    <!--swiper-->
@@ -35,6 +36,9 @@
 
    <!-- AOS 라이브러리 불러오기-->
    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+
+   <!-- 헤더,푸터 연결-->
+   <script src="https://www.w3schools.com/lib/w3.js"></script><!--import 스크립트는 헤드에 넣어주기-->
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
    
 </head>
@@ -43,7 +47,7 @@
 <div id="wrap" >
 
     <!--header, 헤더-->
-    <div id="header">
+    <!-- <div id="header">
       <div class="header_inner">
         <div class="gnb_wrap">
           <div class="logo_area">
@@ -80,7 +84,7 @@
         
         <div class="right_menu">
           <div class="join">
-            <a href="/sub/join.html">회원가입</a>
+            <a href="sub/join.html">회원가입</a>
           </div>
 
           <div class="class_registration">
@@ -96,8 +100,12 @@
           </div>
         </div>      
       </div>
-    </div>
+    </div> -->
+    <div w3-include-html="sub/header.html"></div>
+  
 
+    <!-- <header data-include="sub/header.html"></header> -->
+    
     <!-- mobile_menu 모바일 메뉴-->
     <div id="mobile_menu_wrap">
       <div id="mobile_right_box">
@@ -298,7 +306,7 @@
               <div class="student_pfolio_info_inner">
                 <ul class="student_pfolio_flex ">
                   <li class="student_pfolio_name">
-                    <a href="">내가만든테트리스</a>
+                   내가만든테트리스
                   </li>
                   <li class="student_user_info">
                     <a class="student_user_name">
@@ -321,7 +329,7 @@
               <div class="student_pfolio_info_inner">
                 <ul class="student_pfolio_flex ">
                   <li class="student_pfolio_name">
-                    <a href="">내가만든테트리스</a>
+                    내가만든테트리스
                   </li>
                   <li class="student_user_info">
                     <a class="student_user_name">
@@ -344,7 +352,7 @@
               <div class="student_pfolio_info_inner">
                 <ul class="student_pfolio_flex ">
                   <li class="student_pfolio_name">
-                    <a href="">내가만든테트리스</a>
+                    내가만든테트리스
                   </li>
                   <li class="student_user_info">
                     <a class="student_user_name">
@@ -367,7 +375,7 @@
               <div class="student_pfolio_info_inner">
                 <ul class="student_pfolio_flex ">
                   <li class="student_pfolio_name">
-                    <a href="">내가만든테트리스</a>
+                    내가만든테트리스
                   </li>
                   <li class="student_user_info">
                     <a class="student_user_name">
@@ -460,7 +468,7 @@
     </div>
 
     <!-- footer, 푸터 -->
-    <div id="footer">
+    <!-- <div id="footer">
       <div class="footer_inner">
         <div class="foot_nav">
           <ul class="foot_nav_group">
@@ -516,18 +524,32 @@
         
 
       </div>
-    </div>
+    </div> -->
 
+    <footer data-include="sub/footer.html"></footer>
 <!--wrap end div-->  
   </div>  
   
+
+
   <!--js-->
-  <script src="js/main.js" ></script>
+  <script src="js/includes.js"></script>
+  <script src="js/main.js" async></script>
+  <script> w3.includeHTML(); </script>
+  
 
    <!-- AOS 스크립트 시작 -->
    <script> 
     AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
   </script>
    
+   <!--모달-->
+    <div id="portfolio_modal" style="width:100%; height: 400px; position: fixed; top: 0;
+    left: 0; background-color: antiquewhite; display: none; z-index: 9999;">
+      안녕하세요ㄴ
+      <button class="portfolio_modal_btn">
+        닫기
+      </button>
+    </div>
 </body>
 </html>
