@@ -13,7 +13,37 @@
 
 
 
-/*학생포트폴리오 팝업*/ 
+/*학생포트폴리오 팝업*/
+
+
+function portfoliomodal() {
+    
+    const modalOpen = document.querySelectorAll(".student_pfolio_name");  //{} //[{},{},{},{}]
+    const modalClose = document.querySelectorAll(".portfolio_modal_btn");    
+
+    for (let i = 0; i < modalOpen.length; i++) {
+        modalOpen[i].addEventListener("click",e => {
+            document.querySelector("#portfolio_modal").style.display = "block"
+           });
+    }
+
+    // console.log(modalOpen);
+
+    // modalOpen.forEach((con) => {
+    //     console.log(con);
+    // })
+
+    // modalOpen.addEventListener("click",e => {
+    //     document.querySelector("#portfolio_modal").style.display = "block"
+    //    });
+      
+    modalClose[0].addEventListener("click",e => {
+        document.querySelector("#portfolio_modal").style.display = "none"
+       });
+    } 
+
+portfoliomodal();
+
 
  /**/ 
  /*스틱코드 단축 자동완성 호출 태그 : modal_js*/
